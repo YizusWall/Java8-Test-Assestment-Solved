@@ -20,11 +20,6 @@ public class ArraysDataStructure{
                 year) -> (year >= 1 && year <= 2005) ? (year % 10 == 0) ? (year / 100) : (year / 100) + 1 : 0;
         System.out.println(res.operation(2019));
 
-        // first duplicate en array
-         int[] arrD = { 2, 4, 5, 6, 7, 2, 5 };
-        System.out.print("first duplicate en array ");
-        System.out.println(firstDuplicate(arrD));
-
         // Sorting Banking Account
          String[] dataS = { "6", "03 10103538 2222 1233 6160 0142", "03 10103538 2222 1233 6160 0141",
                 "30 10103538 2222 1233 6160 0141", "30 10103538 2222 1233 6160 0142", "30 10103538 2222 1233 6160 0141",
@@ -38,13 +33,6 @@ public class ArraysDataStructure{
         final int[] dataN = { 4, 0, 1, -2, 3 };
         System.out.print("mutateTheArrayOptimize ");
         System.out.println(Arrays.toString(mutateTheArray(dataN)));
-
-    }
-
-
-    static int firstDuplicate(int[] arr) {
-       Set<Integer> allItems = new HashSet<>();
-      return Arrays.stream(arr).filter(i -> !allItems.add(i)).findFirst().orElse(-1);
 
     }
 
