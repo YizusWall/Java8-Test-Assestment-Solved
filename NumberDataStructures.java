@@ -2,6 +2,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.stream.IntStream;
 
+
 public class NumberDataStructures {
 ;
 
@@ -16,6 +17,8 @@ public class NumberDataStructures {
                 int number=123456;
                 System.out.print("Manipulate Arithmetic Number\n");
                 System.out.println(digitsManipulations(number));
+                //Count Pairs With Diff K
+                System.out.println("Count Pairs With Diff K: "+countTinyPairs(arrD));
  
     }
 
@@ -27,6 +30,16 @@ public class NumberDataStructures {
         Set<Integer> allItems = new HashSet<>();
        return Arrays.stream(arr).filter(i -> !allItems.add(i)).findFirst().orElse(-1);
  
+     }
+
+     static int countTinyPairs(int[] arr, int k) {
+        int total=0;
+        IntPredicate isDiff= e-> d-e=k || e-d=k;
+
+        IntStream.range(0,arr.length).forEach(d->{
+        total= IntStream.range(d+1,arr.length).filter(isDiff).mapToInt(d->count).sum();
+        });
+        return total;
      }
 
      static int digitsManipulations(int n){
