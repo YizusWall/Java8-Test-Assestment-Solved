@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class ArraysDataStructure{
 
-
+    int count=0;
     public static void main(final String... s) {
 
         // change Century From year
@@ -63,7 +63,24 @@ public class ArraysDataStructure{
         mapa.forEach((key,value)->System.out.println(key+" "+value));
     }
 
+    boolean compare(int[] a, int[] b){
+        if(a.length==b.length){ //first condition
+            count=0;
+			IntStream.range(0,a.length).forEach(x->{
+               IntStream.range(0,b.length).filter(y->a[x]==b[y]).forEach(y->count++);
+            });
+    
+            if(count==a.length) return true;
+        } 
+    
+        return false;
+    }
+    
+    
+
 }
+
+
 interface MathOperation {
    public int operation(int a);
 
