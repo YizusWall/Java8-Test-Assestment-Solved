@@ -1,4 +1,6 @@
 
+package com.yizuslabs.java.assestment;
+
 import java.util.List;
 import java.util.stream.IntStream;
 

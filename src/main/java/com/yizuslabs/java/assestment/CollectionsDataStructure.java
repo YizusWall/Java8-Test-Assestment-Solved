@@ -1,3 +1,6 @@
+
+package com.yizuslabs.java.assestment;
+
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 

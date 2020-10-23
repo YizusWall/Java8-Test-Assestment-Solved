@@ -1,4 +1,4 @@
-package ballclockassigment;
+package com.yizuslabs.java.assestment;
 
 public class BallClockApp {
 
